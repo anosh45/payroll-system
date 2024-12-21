@@ -58,4 +58,23 @@ int main() {
                      << setw(10) << "Hourly Rate"
                      << setw(10) << "Salary" << endl;
                 cout << "-------------------------------------------\n";
+                
+                for (int i = 0; i < employeeCount; ++i) {
+                    cout << left << setw(10) << employees[i].id
+                         << setw(20) << employees[i].name
+                         << setw(15) << employees[i].hoursWorked
+                         << setw(10) << fixed << setprecision(2) << employees[i].hourlyRate
+                         << setw(10) << employees[i].salary << endl;
+                }
+                cout << "-------------------------------------------\n";
+            }
+        } else if (choice == 3) {
+            cout << "Exiting the program. Goodbye!\n";
+        } else {
+            cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 3);
+
+    return 0;
+}
 
